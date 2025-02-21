@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
     <title>Formulario</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <style>
         .shirt {
             width: 400px;
@@ -29,13 +29,19 @@
 <body>
     <div class="container">
         <h2>Completa el formulario</h2>
-        <form action="#" method="" class="form" id="shirt-form">
+        <form action="https://request-data.onrender.com/register-tshirt" method="post" class="form" id="shirt-form">
             <div class="form-group">
                 <label for="words">Texto (máximo 15 caracteres):</label>
                 <input type="text" id="words" name="words" maxlength="15" required>
             </div>
 
-            <!-- Selector de talla S, M , L -- -->
+            <!-- Selector de color -->
+            <div class="form-group">
+                <label for="color"> Color preferido: </label>
+                <input type="color" id="color" name="color" value="#ffffff">
+            </div>
+
+            <!-- Selector de talla S, M , L -->
             <div class="form-group">
                 <label for="size"> Tamaño de la camiseta: </label>
                 <select id="size" name="size">
@@ -44,12 +50,6 @@
                     <option value="large">L</option>
                 </select>
             </div>
-
-             <!-- Selector de color -- -->
-             <div class="form-group">
-                <label for="color"> Color preferido: </label>
-                <input type="color" id="color" name="color" value="#ffffff">
-
 
             <div class="form-group">
                 <input type="submit" value="Enviar">
@@ -63,7 +63,6 @@
             <img style="width:100%" src="t-shirt.png" alt="">
             <span class="shirt-text"></span>
         </div>
-    </div>
     </div>
 
     <script>
