@@ -7,15 +7,32 @@
     <title>Chistes Malos</title>
     <style>
         /** Aquí tus reglas CSS */
-p {
-    color: green;
-}
-
-
-
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
+
+        /** ------- todas las p en verde--------- */
+        p {
+            color: green;
+        }
+
+        /**--------- segundo chiste en azul---------*/
+        .mates {
+            color: blue;
+        }
+
+        /**--------- los p hijos del footer con fondo amarillo ---------*/
+
+        footer p {
+            background-color: yellow;
+        }
+
+        /**--------- todos los p pares en mayúscula ---------*/
+
+        p:nth-of-type(even) {
+            text-transform: uppercase;
+        }
+        
     </style>
 </head>
 
@@ -38,4 +55,5 @@ p {
         <p>¿Por qué los pájaros no usan Facebook? Porque ya tienen <del>Twitter</del> X.</p>
     </footer>
 </body>
+
 </html>
