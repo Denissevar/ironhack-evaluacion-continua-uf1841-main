@@ -5,20 +5,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio de maquetacion</title>
+
     <style>
         * {
             box-sizing: border-box;
         }
 
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+        }
 
+        .pricing-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 90%;
+        }
+
+        .plan {
+            background-color: white;
+            border-radius: 5px;
+            text-align: center;
+            border-color: 1px solid #f0f0f0;
+        }
+
+
+        /* shadow*/
+        .plan:hover {
+            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        /* shadow for pro*/
+        .plan:nth-child(2):hover {
+            box-shadow: 0 8px 12px 0 rgba(104, 104, 171, 0.8);
+        }
+
+        /* header  basico, pro y premium */
+        .plan-header {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 100;
+            padding: 15px;
+            background-color: black;
+        }
+
+        /* pro header color purple */
+        .plan:nth-child(2) .plan-header {
+            background-color: #6868AC;
+        }
+
+        .plan-price {
+            font-size: 1.2rem;
+            background-color: #f0f0f0;
+            padding: 15px;
+        }
+
+        .plan-features {
+            list-style: none;
+            padding: 0px;
+        }
+
+        .plan-features li {
+            padding: 10px;
+            border-bottom: 1px solid #f8f8f8;
+        }
+
+        /* remove bottom-border from last li */
+        .plan-features li:last-child {
+            border-bottom: none;
+            padding-bottom: 0px;
+        }
+
+        .outsidebutton {
+            font-size: 1.2rem;
+            background-color: #f0f0f0;
+            padding: 10px;
+            color: white;
+            padding: 15px;
+            justify-content: center;
+            align-items: center;
+        }
         
+        /* button */
+        .registrarse {
+            background-color: #6868AC;
+            color: white;
+            padding: 8px;
+            font-size: 1rem;
+            border: none;
+            width: 50%;
+            cursor: pointer;
+            width: auto;
+        }
+
+        .registrarse:hover {
+            background-color: #8a8adb;
+        }
+
+        @media {
+            max-width: 768px) {
+                .membership {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                plan {
+                    width: 100%;
+                    max-width: 350px;
+                }
+            }
     </style>
 </head>
 
 <body>
-    <section class="memberships">
-        <div call="plan">
-            <div class="plan-header-basic">Básico</div>
+    <section class="pricing-container">
+        <div class="plan">
+            <div class="plan-header">Básico</div>
             <div class="plan-price">$ 9.99 / año</div>
             <ul class="plan-features">
                 <li>10GB de Almacenamiento</li>
@@ -26,10 +136,12 @@
                 <li>10 Dominios</li>
                 <li>1GB de Ancho de Banda</li>
             </ul>
+            <div class="outsidebutton">
             <button class="registrarse"> Registrarse</button>
         </div>
-        <div call="plan">
-            <div class="plan-header-pro">Pro</div>
+    </div>
+        <div class="plan">
+            <div class="plan-header">Pro</div>
             <div class="plan-price">$ 24.99 / año</div>
             <ul class="plan-features">
                 <li>25GB de Almacenamiento</li>
@@ -37,10 +149,12 @@
                 <li>25 Dominios</li>
                 <li>2GB de Ancho de Banda</li>
             </ul>
+            <div class="outsidebutton">
             <button class="registrarse"> Registrarse</button>
         </div>
-        <div call="plan">
-            <div class="plan-header-premium">Premium</div>
+    </div>
+        <div class="plan">
+            <div class="plan-header">Premium</div>
             <div class="plan-price">$ 49.99 / año</div>
             <ul class="plan-features">
                 <li>50GB de Almacenamiento</li>
@@ -48,8 +162,11 @@
                 <li>50 Dominios</li>
                 <li>5GB de Ancho de Banda</li>
             </ul>
-            <button class="registrarse"> Registrarse</button>
+            <div class="outsidebutton">
+                <button class="registrarse"> Registrarse</button>
+            </div>
         </div>
     </section>
 </body>
+
 </html>
