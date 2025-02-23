@@ -33,7 +33,7 @@
             background-color: white;
             border-radius: 5px;
             text-align: center;
-            border-color: 1px solid #f0f0f0;
+            border: 1px solid #f0f0f0;
         }
 
 
@@ -92,7 +92,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         /* button */
         .registrarse {
             background-color: #6868AC;
@@ -100,7 +100,6 @@
             padding: 8px;
             font-size: 1rem;
             border: none;
-            width: 50%;
             cursor: pointer;
             width: auto;
         }
@@ -109,18 +108,17 @@
             background-color: #8a8adb;
         }
 
-        @media {
-            max-width: 768px) {
-                .membership {
-                    flex-direction: column;
-                    align-items: center;
-                }
-
-                plan {
-                    width: 100%;
-                    max-width: 350px;
-                }
+        @media (max-width: 768px) {
+            .membership {
+                flex-direction: column;
+                align-items: center;
             }
+
+            .plan {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
     </style>
 </head>
 
@@ -136,9 +134,9 @@
                 <li>1GB de Ancho de Banda</li>
             </ul>
             <div class="outsidebutton">
-            <button class="registrarse"> Registrarse</button>
+                <button class="registrarse"> Registrarse</button>
+            </div>
         </div>
-    </div>
         <div class="plan">
             <div class="plan-header">Pro</div>
             <div class="plan-price">$ 24.99 / año</div>
@@ -149,9 +147,9 @@
                 <li>2GB de Ancho de Banda</li>
             </ul>
             <div class="outsidebutton">
-            <button class="registrarse"> Registrarse</button>
+                <button class="registrarse"> Registrarse</button>
+            </div>
         </div>
-    </div>
         <div class="plan">
             <div class="plan-header">Premium</div>
             <div class="plan-price">$ 49.99 / año</div>
